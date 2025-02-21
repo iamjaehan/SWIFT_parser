@@ -16,6 +16,8 @@ with open(input_file, "r", encoding="utf-8") as f:
         try:
             flight = json.loads(line.strip())  # Parse each line as a JSON object
             extracted_info = {}
+            sub = flight["ds:tfmDataService"]
+            print(sub[].keys())
 
             # Extract relevant TOS events
             for key in TOS_EVENTS:
